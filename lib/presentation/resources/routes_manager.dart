@@ -3,6 +3,7 @@ import 'package:cv_pdf/presentation/common/logic/cubit/cv_format/cv_format_cubit
 import 'package:cv_pdf/presentation/common/logic/cubit/cv_list/cv_list_cubit.dart';
 import 'package:cv_pdf/presentation/common/logic/cubit/cv_theme/cv_theme_cubit.dart';
 import 'package:cv_pdf/presentation/common/logic/cubit/drop_down_selected/drop_down_selected_cubit.dart';
+import 'package:cv_pdf/presentation/common/logic/cubit/font/font_cubit.dart';
 
 import '../../app/di.dart';
 import '../screens/app_info_page/app_info_page.dart';
@@ -28,6 +29,8 @@ class Routes {
 class RouteGenerator {
   final CvListCubit _cvCubit = CvListCubit();
   final CvThemeCubit _cvThemeCubit = CvThemeCubit();
+  final FontCubit _fontCubit = FontCubit();
+
   Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.mainRoute:
@@ -48,6 +51,7 @@ class RouteGenerator {
                     BlocProvider.value(
                       value: _cvThemeCubit,
                     ),
+                    BlocProvider.value(value: _fontCubit),
                   ],
                   child: const AddCvPage(),
                 ),
@@ -60,8 +64,13 @@ class RouteGenerator {
 
       case Routes.cvThemeRoute:
         return MaterialPageRoute(
-            builder: (_) => BlocProvider.value(
-                  value: _cvThemeCubit,
+            builder: (_) => MultiBlocProvider(
+                  providers: [
+                    BlocProvider.value(
+                      value: _cvThemeCubit,
+                    ),
+                    BlocProvider.value(value: _fontCubit),
+                  ],
                   child: const CvThemePage(),
                 ));
 

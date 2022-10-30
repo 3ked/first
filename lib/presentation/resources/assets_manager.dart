@@ -8,7 +8,23 @@ class ImageAssets {
 }
 
 class FontAssets {
+  //font
+
+  //english and arabic language
   static const String hacenTunisia = "$fontPath/Hacen-Tunisia.ttf";
+  static const String helveticaWorld = "$fontPath/HelveticaWorld.ttf";
+  static const String bonaNova = "$fontPath/BonaNova.ttf";
+
+  // arabic language
+  static const String notoKufiArabic = "$fontPath/NotoKufiArabic.ttf";
+
+  // english language
+  static const String mansalva = "$fontPath/Mansalva.ttf";
+  static const String openSans = "$fontPath/OpenSans.ttf";
+  static const String eBGaramond = "$fontPath/EBGaramond.ttf";
+  static const String gFSDidot = "$fontPath/GFSDidot.ttf";
+
+  //icon
   static const String icofont = "$fontPath/icofont.ttf";
   static const String materialIcons = "$fontPath/Material_Icons.ttf";
 }

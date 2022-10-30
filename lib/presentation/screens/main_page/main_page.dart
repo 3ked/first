@@ -96,14 +96,14 @@ class _MainPageState extends State<MainPage> {
                 setState(() {
                   _banner = ad as BannerAd;
                 });
-                debugPrint("Ad loaded.");
+                // debugPrint("Ad loaded.");
               },
               onAdFailedToLoad: (ad, error) {
                 ad.dispose();
-                debugPrint("Ad failed to load: $error");
+                // debugPrint("Ad failed to load: $error");
               },
-              onAdOpened: (ad) => debugPrint("Ad opened."),
-              onAdClosed: (ad) => debugPrint("Ad closed."),
+              // onAdOpened: (ad) => debugPrint("Ad opened."),
+              // onAdClosed: (ad) => debugPrint("Ad closed."),
             ),
             request: const AdRequest())
         .load();

@@ -1,8 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class FontConstants {
-  static const String fontFamily = "Montserrat";
+class FontFamily {
+  static const String helveticaWorld = "Helvetica World";
+  static const String bonaNova = "Bona Nova";
+  static const String eBGaramond = "EB Garamond";
+  static const String gFSDidot = "GFS Didot";
+  static const String hacenTunisia = "Hacen Tunisia";
+  static const String mansalva = "Mansalva";
+  static const String notoKufiArabic = "Noto Kufi Arabic";
+  static const String openSans = "Open Sans";
 }
 
 class FontWeightManager {

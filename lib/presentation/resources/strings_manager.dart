@@ -147,4 +147,5 @@ class AppStrings {
   static const conectDev = "conectDev";
   static const notLaunch = "notLaunch";
   static const msgShar = "msgShar";
+  static const pickFont = "pickFont";
 }

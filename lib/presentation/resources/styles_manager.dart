@@ -7,28 +7,25 @@ TextStyle _getTextStyle(double fontSize, FontWeight fontWeight, Color color) {
     fontSize: fontSize,
     fontWeight: fontWeight,
     color: color,
-    fontFamily: FontConstants.fontFamily,
+    fontFamily: FontFamily.helveticaWorld,
   );
 }
 
 // regular style
 
-TextStyle getRegularStyle(
-    {double fontSize = FontSize.s10, required Color color}) {
+TextStyle getRegularStyle({double fontSize = FontSize.s10, required Color color}) {
   return _getTextStyle(fontSize, FontWeightManager.regular, color);
 }
 
 // medium style
 
-TextStyle getMediumStyle(
-    {double fontSize = FontSize.s10, required Color color}) {
+TextStyle getMediumStyle({double fontSize = FontSize.s10, required Color color}) {
   return _getTextStyle(fontSize, FontWeightManager.medium, color);
 }
 
 // light style
 
-TextStyle getLightStyle(
-    {double fontSize = FontSize.s10, required Color color}) {
+TextStyle getLightStyle({double fontSize = FontSize.s10, required Color color}) {
   return _getTextStyle(fontSize, FontWeightManager.light, color);
 }
 
@@ -40,7 +37,6 @@ TextStyle getBoldStyle({double fontSize = FontSize.s10, required Color color}) {
 
 // semibold style
 
-TextStyle getSemiBoldStyle(
-    {double fontSize = FontSize.s10, required Color color}) {
+TextStyle getSemiBoldStyle({double fontSize = FontSize.s10, required Color color}) {
   return _getTextStyle(fontSize, FontWeightManager.semiBold, color);
 }

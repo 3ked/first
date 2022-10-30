@@ -18,19 +18,26 @@ class CVPdfGenerator {
     required String cvCertificate,
     required int pageValue,
     required int fontValue,
+    required dynamic font,
   }) async {
     final pdf = pw.Document();
+    final pw.Font ttf;
+
+    // image
     final image = (await rootBundle.load(ImageAssets.emptyProfile)).buffer.asUint8List();
 
-    final font = await rootBundle.load(FontAssets.hacenTunisia);
-    final ttf = pw.Font.ttf(font);
+    // font
+    final loadFont = await rootBundle.load(font);
+    ttf = pw.Font.ttf(loadFont);
 
+    // icon
     final iconFont = await rootBundle.load(FontAssets.icofont);
     final myIcon = pw.Font.ttf(iconFont);
 
     final icon = await rootBundle.load(FontAssets.materialIcons);
     final ttfIcon = pw.Font.ttf(icon);
 
+    // color
     var pdfPageColor = PdfColor.fromInt(pageValue);
     var pdfFontColor = PdfColor.fromInt(fontValue);
     pdf.addPage(

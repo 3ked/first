@@ -1,10 +1,11 @@
 import 'dart:io';
+import 'package:cv_pdf/presentation/resources/routes_manager.dart';
+
 import '../../../common/service/ad_helper.dart';
 import '../../../resources/assets_manager.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../../../resources/color_manager.dart';
-import '../../../resources/routes_manager.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:file_manager/controller/file_manager_controller.dart' as con;
 import 'package:file_manager/file_manager.dart';
@@ -33,7 +34,6 @@ class _InternalFilesTabState extends State<InternalFilesTab> {
   void initState() {
     getFiles();
     createInterstitialAd();
-    print(_interstitialAd);
     super.initState();
   }
 
@@ -112,12 +112,10 @@ class _InternalFilesTabState extends State<InternalFilesTab> {
                                     // open the folder
                                     controller.openDirectory(entity);
                                   } else {
-                                    print(_interstitialAd);
-                                    showInterstitialAd;
-                                    print(_interstitialAd);
+                                    showInterstitialAd();
                                     // open the file
-                                    // Navigator.pushNamed(context, Routes.pdfViewerRoute,
-                                    //     arguments: entity);
+                                    Navigator.pushNamed(context, Routes.pdfViewerRoute,
+                                        arguments: entity);
                                   }
                                 },
                               ),
@@ -315,8 +313,8 @@ class _InternalFilesTabState extends State<InternalFilesTab> {
         },
       );
       _interstitialAd!.show();
-      // _interstitialAd = null;
-    } 
+      _interstitialAd = null;
+    }
   }
 
   @override

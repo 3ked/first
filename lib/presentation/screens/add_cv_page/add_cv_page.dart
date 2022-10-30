@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:cv_pdf/presentation/common/logic/cubit/cv_format/cv_format_cubit.dart';
 import 'package:cv_pdf/presentation/common/logic/cubit/cv_list/cv_list_cubit.dart';
 import 'package:cv_pdf/presentation/common/logic/cubit/cv_theme/cv_theme_cubit.dart';
+import 'package:cv_pdf/presentation/common/logic/cubit/font/font_cubit.dart';
 
 import '../../../domain/models/models.dart';
 import '../../common/logic/cubit/drop_down_selected/drop_down_selected_cubit.dart';
@@ -168,6 +169,7 @@ class _AddCvPageState extends State<AddCvPage> {
                       cvCertificate: file,
                       pageValue: context.read<CvThemeCubit>().state.pageValue,
                       fontValue: context.read<CvThemeCubit>().state.fontValue,
+                      font: context.read<FontCubit>().state,
                     );
 
                     buildDialogPdfName(contextPage: context, pdf: pdf);
@@ -185,6 +187,7 @@ class _AddCvPageState extends State<AddCvPage> {
                             certificateTypeList),
                         pageValue: context.read<CvThemeCubit>().state.pageValue,
                         fontValue: context.read<CvThemeCubit>().state.fontValue,
+                        font: context.read<FontCubit>().state,
                       );
                       buildDialogPdfName(contextPage: context, pdf: pdf);
                     }
@@ -233,6 +236,7 @@ class _AddCvPageState extends State<AddCvPage> {
                           cvCertificate: file,
                           pageValue: context.read<CvThemeCubit>().state.pageValue,
                           fontValue: context.read<CvThemeCubit>().state.fontValue,
+                          font: context.read<FontCubit>().state,
                         );
                         final cvPdf = await InternalDataSourceImpl().saveDocument(pdf: pdf);
                         openPdf(context, cvPdf);
@@ -250,6 +254,7 @@ class _AddCvPageState extends State<AddCvPage> {
                                 certificateTypeList),
                             pageValue: context.read<CvThemeCubit>().state.pageValue,
                             fontValue: context.read<CvThemeCubit>().state.fontValue,
+                            font: context.read<FontCubit>().state,
                           );
                           final cvPdf = await InternalDataSourceImpl().saveDocument(pdf: pdf);
                           openPdf(context, cvPdf);

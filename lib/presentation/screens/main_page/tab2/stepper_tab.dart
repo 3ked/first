@@ -1,6 +1,6 @@
-import '../../../common/service/ad_helper.dart';
+import 'package:cv_pdf/presentation/common/service/ad_helper.dart';
+import 'package:cv_pdf/presentation/resources/routes_manager.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import '../../../resources/routes_manager.dart';
 import '../../../resources/strings_manager.dart';
 import '../../../resources/values_manager.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -27,7 +27,7 @@ class _StepperTabState extends State<StepperTab> {
   InterstitialAd? _interstitialAd;
   @override
   void initState() {
-    // _interstitialAd = AdHelper().createInterstitialAd();
+    createInterstitialAd();
     super.initState();
   }
 
@@ -47,7 +47,7 @@ class _StepperTabState extends State<StepperTab> {
               currentStep: currentStep,
               onStepContinue: () {
                 if (isLastStep) {
-                  //   AdHelper().showInterstitialAd(_interstitialAd);
+                  showInterstitialAd();
                   // send data to server
                   Navigator.pushNamed(context, Routes.addCVRoute,
                       arguments: buildCertificateSelected());
@@ -209,5 +209,33 @@ class _StepperTabState extends State<StepperTab> {
       }
     }
     return certificateList[0];
+  }
+
+  void createInterstitialAd() {
+    InterstitialAd.load(
+      adUnitId: AdHelper.interstitialAdUnitId,
+      request: const AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) => _interstitialAd = ad,
+        onAdFailedToLoad: (LoadAdError error) => _interstitialAd = null,
+      ),
+    );
+  }
+
+  void showInterstitialAd() {
+    if (_interstitialAd != null) {
+      _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
+        onAdDismissedFullScreenContent: (ad) {
+          ad.dispose();
+          createInterstitialAd();
+        },
+        onAdFailedToShowFullScreenContent: (ad, error) {
+          ad.dispose();
+          createInterstitialAd();
+        },
+      );
+      _interstitialAd!.show();
+      _interstitialAd = null;
+    }
   }
 }

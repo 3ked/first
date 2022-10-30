@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdHelper {
   static String get bannerAdUnitId {
@@ -27,44 +26,4 @@ class AdHelper {
   //   onAdOpened: (ad) => debugPrint("Ad opened."),
   //   onAdClosed: (ad) => debugPrint("Ad closed."),
   // );
-
-  // BannerAd? createBannerAd() {
-  //   BannerAd? banner = BannerAd(
-  //       size: AdSize.fullBanner,
-  //       adUnitId: bannerAdUnitId,
-  //       listener: bannerAdListener,
-  //       request: const AdRequest())
-  //     ..load();
-  //   return banner;
-  // }
-
-  // InterstitialAd? createInterstitialAd() {
-  //   InterstitialAd? _interstitialAd;
-  //   InterstitialAd.load(
-  //     adUnitId: bannerAdUnitId,
-  //     request: const AdRequest(),
-  //     adLoadCallback: InterstitialAdLoadCallback(
-  //       onAdLoaded: (ad) => _interstitialAd = ad,
-  //       onAdFailedToLoad: (LoadAdError error) => _interstitialAd = null,
-  //     ),
-  //   );
-  //   return _interstitialAd;
-  // }
-
-  // void showInterstitialAd(InterstitialAd? interstitialAd) {
-  //   if (interstitialAd != null) {
-  //     interstitialAd.fullScreenContentCallback = FullScreenContentCallback(
-  //       onAdDismissedFullScreenContent: (ad) {
-  //         ad.dispose();
-  //         createInterstitialAd();
-  //       },
-  //       onAdFailedToShowFullScreenContent: (ad, error) {
-  //         ad.dispose();
-  //         createInterstitialAd();
-  //       },
-  //     );
-  //     interstitialAd.show();
-  //     interstitialAd = null;
-  //   }
-  // }
 }
