@@ -24,6 +24,7 @@ class AppPadding {
   static double p8H = 8.0.h;
   static double p15H = 15.0.h;
   static double p40H = 40.0.h;
+  static double p80H = 80.0.h;
   static double p100H = 100.0.h;
 
   // padding width

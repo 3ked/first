@@ -39,8 +39,8 @@ class AppStrings {
   static const pdfName = "pdfName";
   static const addName = "addName";
   static const preview = "preview";
-  static const saveInStorage = "saveInStorage";
-  static const saveInApp = "saveInApp";
+  static const saveAsPdf = "saveAsPdf";
+  static const save = "save";
   //////////////////////////////////////////
   static const settings = "settings";
   static const theme = "theme";
@@ -104,6 +104,7 @@ class AppStrings {
   static const pageColor = "pageColor";
   static const fontColor = "fontColor";
   static const pickColor = "pickColor";
+  static const editSectionTitles = "editSectionTitles";
 
 ////////////////////////////////////////////////////////
 
@@ -140,6 +141,7 @@ class AppStrings {
   ////////////////////////////////////////
   static const messageContact = "messageContact";
   static const successMessage = "successMessage";
+  static const successSectionTitleMessage = "successSectionTitleMessage";
   static const connectEmail = "connectEmail";
   static const version = "version";
   static const allRightsReserved = "allRightsReserved";
@@ -148,4 +150,6 @@ class AppStrings {
   static const notLaunch = "notLaunch";
   static const msgShar = "msgShar";
   static const pickFont = "pickFont";
+  static const support = "support";
+  static const notSupport = "notSupport";
 }

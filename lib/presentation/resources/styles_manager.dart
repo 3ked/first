@@ -4,11 +4,10 @@ import 'font_manager.dart';
 
 TextStyle _getTextStyle(double fontSize, FontWeight fontWeight, Color color) {
   return TextStyle(
-    fontSize: fontSize,
-    fontWeight: fontWeight,
-    color: color,
-    fontFamily: FontFamily.helveticaWorld,
-  );
+      fontSize: fontSize,
+      fontWeight: fontWeight,
+      color: color,
+      fontFamily: FontFamily.notoKufiArabic);
 }
 
 // regular style

@@ -1,24 +1,30 @@
 class AppConstants {
   static const int splashDelay = 2;
   static const int sliderAnimationTime = 300;
-  static const personalInformationArabic = "المعلومات الشخصية";
-  static const personalInformationEnglish = "Personal Information";
-  static const languagesArabic = "اللغات";
-  static const languagesEnglish = "Languages";
-  static const achievementsArabic = "الانجازات";
-  static const achievementsEnglish = "Achievements";
-  static const interestsAndHobbiesArabic = "الاهتمامات والهوايات";
-  static const interestsAndHobbiesEnglish = "Interests and Hobbies";
-  static const workExperienceArabic = "خبرات العمل";
-  static const workExperienceEnglish = "Work Experience";
-  static const educationalQualificationsArabic = "المؤهلات التعليمية";
-  static const educationalQualificationsEnglish = "Educational Qualifications";
-  static const personalExperienceAndSkillsArabic = "الخبرات والمهارات الشخصية";
-  static const personalExperienceAndSkillsEnglish = "Personal Experience and Skills";
-  static const profileArabic = "الملف الشخصي";
-  static const profileEnglish = "Profile";
+  ////////////////////////////////////////////////////////////////////////
+
+  static String personalInformationArabic = "المعلومات الشخصية";
+  static String personalInformationEnglish = "Personal Information";
+  static String languagesArabic = "اللغات";
+  static String languagesEnglish = "Languages";
+  static String achievementsArabic = "الانجازات";
+  static String achievementsEnglish = "Achievements";
+  static String interestsAndHobbiesArabic = "الاهتمامات والهوايات";
+  static String interestsAndHobbiesEnglish = "Interests and Hobbies";
+  static String workExperienceArabic = "خبرات العمل";
+  static String workExperienceEnglish = "Work Experience";
+  static String educationalQualificationsArabic = "المؤهلات التعليمية";
+  static String educationalQualificationsEnglish = "Educational Qualifications";
+  static String personalExperienceAndSkillsArabic = "الخبرات والمهارات الشخصية";
+  static String personalExperienceAndSkillsEnglish = "Personal Experience and Skills";
+  static String profileArabic = "الملف الشخصي";
+  static String profileEnglish = "Profile";
+  //////////////////////////////////////////////////////////////////////////
+
   static const String ar = "ar";
   static const String en = "en";
+  //////////////////////////////////////////////////////////////////////////
+
   static const String arCollegeDegree = "ArCollege";
   static const String arHighSchool = "ArSchool";
   static const String arSkillbased = "ArSkillbased";

@@ -194,9 +194,9 @@ class _AddCvPageState extends State<AddCvPage> {
                   }
                 },
                 child: Column(children: [
-                  Text(AppStrings.saveInStorage.tr(), style: Theme.of(context).textTheme.bodySmall),
+                  Text(AppStrings.saveAsPdf.tr(), style: Theme.of(context).textTheme.bodySmall),
                   const Icon(
-                    Icons.save,
+                    Icons.picture_as_pdf,
                   ),
                 ]),
               );
@@ -305,7 +305,7 @@ class _AddCvPageState extends State<AddCvPage> {
                   showSnackBar(context, AppStrings.saveDone);
                 },
                 child: Column(children: [
-                  Text(AppStrings.saveInApp.tr(), style: Theme.of(context).textTheme.bodySmall),
+                  Text(AppStrings.save.tr(), style: Theme.of(context).textTheme.bodySmall),
                   const Icon(
                     Icons.save,
                   ),
