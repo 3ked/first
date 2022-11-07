@@ -54,14 +54,17 @@ class AppInfoPage extends StatelessWidget {
                                   context: context,
                                   scheme: "https",
                                   host: "wa.me",
-                                  path: "/+963938943188");
+                                  path: "/+963935284593");
                             },
                             icon: const Icon(Icons.whatsapp),
                           ),
                           IconButton(
                             onPressed: () {
                               openUrl(
-                                  context: context, scheme: "https", host: "t.me", path: "/JHRTEC");
+                                  context: context,
+                                  scheme: "https",
+                                  host: "t.me",
+                                  path: "/EngAliJoher");
                             },
                             icon: const Icon(Icons.telegram),
                           ),
@@ -78,7 +81,9 @@ class AppInfoPage extends StatelessWidget {
                           IconButton(
                             onPressed: () {
                               openUrl(
-                                  context: context, scheme: "mailto", path: "ali18869@gmail.com");
+                                  context: context,
+                                  scheme: "mailto",
+                                  path: "eng.alijoher@gmail.com");
                             },
                             icon: const Icon(Icons.email),
                           ),
