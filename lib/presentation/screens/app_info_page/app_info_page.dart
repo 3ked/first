@@ -48,16 +48,18 @@ class AppInfoPage extends StatelessWidget {
                       return Dialog(
                           child: Row(
                         children: [
+                          // whatsapp
                           IconButton(
                             onPressed: () {
                               openUrl(
                                   context: context,
                                   scheme: "https",
                                   host: "wa.me",
-                                  path: "/+963935284593");
+                                  path: "/message/BHZRKQVH5I4YB1");
                             },
                             icon: const Icon(Icons.whatsapp),
                           ),
+                          // telegram
                           IconButton(
                             onPressed: () {
                               openUrl(
@@ -68,6 +70,7 @@ class AppInfoPage extends StatelessWidget {
                             },
                             icon: const Icon(Icons.telegram),
                           ),
+                          // facebook
                           IconButton(
                             onPressed: () {
                               openUrl(
@@ -78,6 +81,17 @@ class AppInfoPage extends StatelessWidget {
                             },
                             icon: const Icon(Icons.facebook),
                           ),
+                          // website
+                          IconButton(
+                            onPressed: () {
+                              openUrl(
+                                  context: context,
+                                  scheme: "https",
+                                  host: "engalijoher.blogspot.com");
+                            },
+                            icon: const Icon(Icons.blur_circular_outlined),
+                          ),
+                          // gmail
                           IconButton(
                             onPressed: () {
                               openUrl(
