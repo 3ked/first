@@ -1,3 +1,4 @@
+import 'package:cv_pdf/presentation/resources/color_manager.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -29,10 +30,10 @@ class AppInfoPage extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: AppPadding.p15H),
               child: CircleAvatar(
                 radius: AppSize.s105R,
-                backgroundColor: Theme.of(context).iconTheme.color,
+                backgroundColor: ColorManager.darkGrey,
                 child: CircleAvatar(
                   radius: AppSize.s100R,
-                  backgroundImage: const AssetImage(ImageAssets.emptyProfile),
+                  backgroundImage: const AssetImage(ImageAssets.logo),
                 ),
               ),
             ),
